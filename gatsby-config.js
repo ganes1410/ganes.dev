@@ -37,7 +37,7 @@ module.exports = {
             options: {
               usePrefix: true,
               settings: {
-                Twitter: { theme: "dark" },
+                Twitter: { theme: 'dark' },
               },
             },
           },
@@ -85,4 +85,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
