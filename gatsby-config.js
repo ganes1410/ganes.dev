@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `ganes.dev`,
     author: `Ganesh R`,
-    description: `A blog by Ganesh.Explaining the things that I learn`,
+    description: `A blog by Ganesh. Explaining the things as I learn`,
     social: {
       twitter: `R_Ganesh1410`,
     },
@@ -30,6 +30,15 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+            },
+          },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              usePrefix: true,
+              settings: {
+                Twitter: { theme: "dark" },
+              },
             },
           },
           {
