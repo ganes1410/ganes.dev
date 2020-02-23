@@ -27,18 +27,18 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
             resolve: `@raae/gatsby-remark-oembed`,
             options: {
               usePrefix: true,
               settings: {
                 Twitter: { theme: 'dark' },
               },
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
             },
           },
           {

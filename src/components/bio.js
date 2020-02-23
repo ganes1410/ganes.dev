@@ -56,6 +56,8 @@ const Bio = () => {
         A blog by
         <a
           href={`https://twitter.com/${social.twitter}`}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{ marginLeft: 8 }}>
           {author}
         </a>
