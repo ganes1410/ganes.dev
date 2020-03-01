@@ -34,6 +34,25 @@ const SEO = ({ description, lang, meta, title }) => {
       }}
       title={title}
       titleTemplate={`%s - A blog by Ganesh R`}
+      link={[
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: './favicons/favicon-16.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: './favicons/favicon-32.png',
+        },
+        {
+          rel: 'shortcut icon',
+          type: 'image/png',
+          href: './favicons/favicon.ico',
+        },
+      ]}
       meta={[
         {
           name: `description`,
