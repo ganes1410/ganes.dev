@@ -2,7 +2,7 @@
 title: Stale State in React Hooks
 description: Problems with Stale State in React hooks and how to fix them
 date: 2020-03-06
-canonical_url:
+canonical_url: https://ganes.dev/stale-state-in-react-hooks
 tags: react, javascript, hooks, useEffect
 ---
 
