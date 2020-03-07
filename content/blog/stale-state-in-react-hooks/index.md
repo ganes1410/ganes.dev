@@ -105,4 +105,6 @@ useEffect(() => {
 
 <br/>
 
-To Avoid this kind of problems, I suggest to use the official [eslint-plugin](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks) from the React team.
+To Avoid these kind of problems, I suggest to use the official [eslint-plugin](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks) from the React team.
+
+> This post is cross-posted to <a href="https://dev.to/ganes1410/https://dev.to/ganes1410/stale-state-in-react-hooks-48he" target='_blank'>dev.to</a>
