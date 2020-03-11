@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `ganes.dev`,
     author: `Ganesh R`,
-    siteUrl: 'https://relaxed-goldwasser-a5aa2b.netlify.com/',
+    siteUrl: 'https://ganes.dev',
     description: `A blog by Ganesh. Explaining the things as I learn`,
     social: {
       twitter: `R_Ganesh1410`,
