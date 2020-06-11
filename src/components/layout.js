@@ -64,7 +64,7 @@ const Layout = ({ location, title, children }) => {
           marginBottom: '2.625rem',
         }}>
         <>{header}</>
-        <Toggle value={darkMode.value} onChange={darkMode.toggle} />
+        {/* <Toggle checked={darkMode.value} onChange={darkMode.toggle} /> */}
       </header>
       <main>{children}</main>
       <footer>
