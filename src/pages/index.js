@@ -1,20 +1,21 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
+import { usePosts } from '../hooks/usePosts';
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+const BlogIndex = ({ location }) => {
+  const posts = usePosts();
+  const { title: siteTitle } = posts.site.siteMetadata;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={siteTitle} />
       <Bio />
-      {posts.map(({ node }) => {
+      {posts.allMarkdownRemark.edges.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <article key={node.fields.slug}>
@@ -44,28 +45,3 @@ const BlogIndex = ({ data, location }) => {
 };
 
 export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`;
