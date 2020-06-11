@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import { rhythm, scale } from '../utils/typography';
+import useDarkMode from 'use-dark-mode';
+import Toggle from './Toggle';
 
 const Layout = ({ location, title, children }) => {
+  const darkMode = useDarkMode(false);
+  console.log({ darkMode });
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
@@ -53,7 +56,16 @@ const Layout = ({ location, title, children }) => {
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}>
-      <header>{header}</header>
+      <header
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          marginBottom: '2.625rem',
+        }}>
+        <>{header}</>
+        <Toggle value={darkMode.value} onChange={darkMode.toggle} />
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
