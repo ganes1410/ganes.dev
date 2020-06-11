@@ -2,6 +2,8 @@
 title: Nullish coalescing and Optional chaining
 description: An overview of two new operators recently added to Javascript
 tags: javascript, ecmascript, webdev
+date: 2020-06-11
+canonical_url: https://ganes.dev/nullish-coalescing-and-optional-chaining/
 ---
 
 In this post, I'll explain about two of the recent additions to the javascript. `Nullish Coalescing` and `Optional Chaining`.
