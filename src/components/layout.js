@@ -3,8 +3,8 @@ import { Link } from 'gatsby';
 import { rhythm, scale } from '../utils/typography';
 import useDarkMode from 'use-dark-mode';
 import Toggle from './Toggle';
-import sun from '../../content/assets/sun.png';
-import moon from '../../content/assets/moon.png';
+import sun from '../assets/sun.png';
+import moon from '../assets/moon.png';
 import './layout.css';
 
 const Layout = ({ location, title, children }) => {
