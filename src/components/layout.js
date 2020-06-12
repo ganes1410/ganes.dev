@@ -74,6 +74,7 @@ const Layout = ({ location, title, children }) => {
                 width="16"
                 height="16"
                 role="presentation"
+                alt=""
                 style={{ pointerEvents: 'none' }}
               />
             ),
@@ -83,6 +84,7 @@ const Layout = ({ location, title, children }) => {
                 width="16"
                 height="16"
                 role="presentation"
+                alt=""
                 style={{ pointerEvents: 'none' }}
               />
             ),
