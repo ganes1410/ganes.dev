@@ -53,7 +53,7 @@ const Bio = () => {
         }}
       />
       <p>
-        A blog by
+        Personal blog by
         <a
           href={`https://twitter.com/${social.twitter}`}
           target="_blank"

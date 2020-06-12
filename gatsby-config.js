@@ -31,8 +31,11 @@ module.exports = {
             resolve: `@raae/gatsby-remark-oembed`,
             options: {
               usePrefix: true,
-              settings: {
-                Twitter: { theme: 'dark' },
+              providers: {
+                include: ['Twitter', 'CodeSandbox'],
+                settings: {
+                  Twitter: { theme: 'dark' },
+                },
               },
             },
           },
