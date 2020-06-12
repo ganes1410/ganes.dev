@@ -3,10 +3,12 @@ import { Link } from 'gatsby';
 import { rhythm, scale } from '../utils/typography';
 import useDarkMode from 'use-dark-mode';
 import Toggle from './Toggle';
+import sun from '../../content/assets/sun.png';
+import moon from '../../content/assets/moon.png';
+import './layout.css';
 
 const Layout = ({ location, title, children }) => {
-  const darkMode = useDarkMode(false);
-  console.log({ darkMode });
+  const darkMode = useDarkMode(false, { storageKey: 'ganes.dev-theme' });
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
@@ -22,7 +24,6 @@ const Layout = ({ location, title, children }) => {
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
-            color: `inherit`,
           }}
           to={`/`}>
           {title}
@@ -40,7 +41,6 @@ const Layout = ({ location, title, children }) => {
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
-            color: `inherit`,
           }}
           to={`/`}>
           {title}
@@ -64,7 +64,30 @@ const Layout = ({ location, title, children }) => {
           marginBottom: '2.625rem',
         }}>
         <>{header}</>
-        {/* <Toggle checked={darkMode.value} onChange={darkMode.toggle} /> */}
+        <Toggle
+          checked={darkMode.value}
+          onChange={darkMode.toggle}
+          icons={{
+            checked: (
+              <img
+                src={moon}
+                width="16"
+                height="16"
+                role="presentation"
+                style={{ pointerEvents: 'none' }}
+              />
+            ),
+            unchecked: (
+              <img
+                src={sun}
+                width="16"
+                height="16"
+                role="presentation"
+                style={{ pointerEvents: 'none' }}
+              />
+            ),
+          }}
+        />
       </header>
       <main>{children}</main>
       <footer>
