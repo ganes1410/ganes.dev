@@ -15,7 +15,7 @@ const BlogIndex = ({ location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title={siteTitle} />
       <Bio />
-      {posts.allMarkdownRemark.edges.map(({ node }) => {
+      {posts.allMdx.edges.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <article key={node.fields.slug}>
