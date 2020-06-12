@@ -93,11 +93,11 @@ function handleBrandSelection(brand) {
 
 There is another way to do this if we do not create set object every time while updating the value. That is we can wrap our set in an array. Here is a example of that by [David.K Piano](https://twitter.com/DavidKPiano/)
 
-`oembed: https://twitter.com/DavidKPiano/status/1134466450293436416`
+https://twitter.com/DavidKPiano/status/1134466450293436416
 
 Here is a modest codesandbox example
 
-`oembed: https://codesandbox.io/s/sleepy-leaf-fy9r6`
+https://codesandbox.io/s/sleepy-leaf-fy9r6
 
 I hope this is useful to you! Feel free to leave your thoughts in the comments section.
 

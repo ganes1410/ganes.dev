@@ -28,18 +28,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
-          {
-            resolve: `@raae/gatsby-remark-oembed`,
-            options: {
-              usePrefix: true,
-              providers: {
-                include: ['Twitter', 'CodeSandbox'],
-                settings: {
-                  Twitter: { theme: 'dark' },
-                },
-              },
-            },
-          },
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-images`,
             options: {
