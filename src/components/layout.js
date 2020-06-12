@@ -8,7 +8,7 @@ import moon from '../assets/moon.png';
 import './layout.css';
 
 const Layout = ({ location, title, children }) => {
-  const darkMode = useDarkMode(false, { storageKey: 'ganes.dev-theme' });
+  const darkMode = useDarkMode(null, { storageKey: 'ganes.dev-theme' });
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
@@ -64,32 +64,34 @@ const Layout = ({ location, title, children }) => {
           marginBottom: '2.625rem',
         }}>
         <>{header}</>
-        <Toggle
-          checked={darkMode.value}
-          onChange={darkMode.toggle}
-          icons={{
-            checked: (
-              <img
-                src={moon}
-                width="16"
-                height="16"
-                role="presentation"
-                alt=""
-                style={{ pointerEvents: 'none' }}
-              />
-            ),
-            unchecked: (
-              <img
-                src={sun}
-                width="16"
-                height="16"
-                role="presentation"
-                alt=""
-                style={{ pointerEvents: 'none' }}
-              />
-            ),
-          }}
-        />
+        {darkMode.value !== null && (
+          <Toggle
+            checked={darkMode.value}
+            onChange={darkMode.toggle}
+            icons={{
+              checked: (
+                <img
+                  src={moon}
+                  width="16"
+                  height="16"
+                  role="presentation"
+                  alt=""
+                  style={{ pointerEvents: 'none' }}
+                />
+              ),
+              unchecked: (
+                <img
+                  src={sun}
+                  width="16"
+                  height="16"
+                  role="presentation"
+                  alt=""
+                  style={{ pointerEvents: 'none' }}
+                />
+              ),
+            }}
+          />
+        )}
       </header>
       <main>{children}</main>
       <footer>
