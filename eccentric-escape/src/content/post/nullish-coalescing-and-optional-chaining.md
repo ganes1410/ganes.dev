@@ -1,7 +1,7 @@
 ---
 title: Nullish coalescing and Optional chaining
-description: An overview of two new operators recently added to Javascript
-tags: [javascript, ecmascript, webdev]
+description: An overview of two operators recently added to Javascript
+tags: [javascript, ecmascript]
 publishDate: 2020-06-11
 canonical_url: https://ganes.dev/nullish-coalescing-and-optional-chaining/
 ---
