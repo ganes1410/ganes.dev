@@ -38,5 +38,4 @@ A personal blog by Ganesh R
 - [Expressive Code](https://expressive-code.com/) source code and syntax highlighter
 
 ## License
-
 MIT
