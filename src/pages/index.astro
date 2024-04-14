@@ -7,14 +7,11 @@ import { getAllPosts, sortMDByDate } from "@/data/post";
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section class="mb-4">
-		<p>
-			Hi, This is my personal blog. I write about the things that interest me.
-		</p>
+		<p>Hi, This is my personal blog. I write about the things that interest me.</p>
 		<SocialList />
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
