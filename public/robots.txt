@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ganes.dev/sitemap-index.xml
